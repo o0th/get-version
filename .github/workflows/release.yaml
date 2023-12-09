@@ -6,7 +6,7 @@ on:
     branches:
       - master
 
-permission:
+permissions:
   contents: write
 
 jobs:
