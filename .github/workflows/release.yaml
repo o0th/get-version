@@ -17,11 +17,14 @@ jobs:
       - run: cargo build --release
       - run: echo "VERSION=$(./target/release/get-version)" >> $GITHUB_ENV
       - uses: actions/github-script@v7
+        env:
+          VERSION: ${{ env.VERSION }}
         with:
           script: |
+            const version = process.env.VERSION
             github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: "refs/tags/{{ $VERSION }}",
+              ref: `refs/tags/${version}`,
               sha: context.sha
             })
