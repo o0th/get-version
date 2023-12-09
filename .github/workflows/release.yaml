@@ -1,0 +1,19 @@
+---
+name: release 
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo build --release
+      - run: echo "VERSION=$(./target/release/get-version)" >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "get-version-$VERSION"
+          path: "./target/release/get-version"
