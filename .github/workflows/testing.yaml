@@ -1,0 +1,16 @@
+---
+name: testing
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo build --release
+      - run: echo "VERSION=$(./target/release/get-version)" >> $GITHUB_ENV
+      - run: echo "VERSION is $VERSION"
