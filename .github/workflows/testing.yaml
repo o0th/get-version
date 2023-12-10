@@ -4,7 +4,7 @@ name: testing
 on:
   push:
     branches:
-      - testing 
+      - testing-action
 
 jobs:
   testing:
