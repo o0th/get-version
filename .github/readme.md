@@ -7,7 +7,7 @@ Get version from Cargo.toml
 - uses: actions/checkout@v4
 
 # Get version
-- uses: o0th/get-version@0.1.0
+- uses: o0th/get-version@0.1.1
 
 # Use version
 - run: echo "Version: ${{ env.VERSION }}"
@@ -16,6 +16,6 @@ Get version from Cargo.toml
 ### Usage as binary
 
 ```bash
-curl -SLO https://github.com/o0th/get-version/releases/download/0.1.0/get-version
+curl -SLO https://github.com/o0th/get-version/releases/download/0.1.1/get-version
 ./get-version
 ```
