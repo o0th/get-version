@@ -9,8 +9,14 @@ Get version from Cargo.toml
 # Get version
 - uses: o0th/get-version@0.2.0
 
+# Read Cargo.toml
+- run: echo "VERSION=$(get-version)" >> $GITHUB_ENV
+
+# Pipe in
+- run: echo "VERSION=$(cat Cargo.toml | get-version)" >> $GITHUB_ENV
+
 # Use version
-- run: echo "Version: ${{ env.VERSION }}"
+- run: echo "${{ env.VERSION }}"
 ```
 
 ### Usage as binary
