@@ -9,3 +9,4 @@ runs:
         curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
         chmod +x get-version
         echo "$(pwd)" >> $GITHUB_PATH
+        source $GITHUB_PATH
