@@ -8,4 +8,6 @@ runs:
       run: |
         curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
         chmod +x get-version
+        echo $GITHUB_PATH
         echo "${{ github.action_path }}" >> $GITHUB_PATH
+        echo $GITHUB_PATH
