@@ -7,5 +7,5 @@ runs:
     - shell: bash
       run: |
         curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
-        chmod +x get-version
-        echo "$PWD" >> $GITHUB_PATH
+        mv get-version /usr/local/bin/get-version
+        chmod +x /usr/local/bin/get-version
