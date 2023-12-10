@@ -11,3 +11,5 @@ runs:
         echo "$GITHUB_PATH"
         echo "$GITHUB_WORKSPACE" >> $GITHUB_PATH
         echo "$GITHUB_PATH"
+        echo "::add-path::$GITHUB_WORKSPACE"
+        echo "$GITHUB_PATH"
