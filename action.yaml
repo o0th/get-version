@@ -1,0 +1,10 @@
+name: ge-version 
+description: Get version from Cargo.toml
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        curl -SLO https://github.com/o0th/get-version/releases/download/0.1.0/get-version
+        echo "VERSION=$(./get-version)" >> $GITHUB_ENV
