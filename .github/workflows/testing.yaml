@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./
-      - run: ./get-version
+      - run: get-version
