@@ -6,8 +6,6 @@ runs:
   steps:
     - shell: bash
       run: |
-        mkdir -p $GITHUB_WORKSPACE/bin
         curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
         chmod +x get-version
-        mv get-version $GITHUB_WORKSPACE/bin/get-version
-        echo "$GITHUB_WORKSPACE/bin" >> $GITHUB_PATH
+        echo "$(pwd)" >> $GITHUB_PATH
