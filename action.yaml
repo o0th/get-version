@@ -6,6 +6,6 @@ runs:
   steps:
     - shell: bash
       run: |
-        curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
+        curl -SLO https://github.com/o0th/get-version/releases/download/0.2.1/get-version
         chmod +x get-version
-        mv get-version $GITHUB_WORKSPACE
+        echo "$PWD" >> $GITHUB_PATH

@@ -7,7 +7,7 @@ Get version from Cargo.toml
 - uses: actions/checkout@v4
 
 # Get version
-- uses: o0th/get-version@0.2.0
+- uses: o0th/get-version@0.2.1
 
 # Read Cargo.toml
 - run: echo "VERSION=$(get-version)" >> $GITHUB_ENV
@@ -24,7 +24,7 @@ Get version from Cargo.toml
 Use the following command to download get-version binary from the GitHub releases:
 
 ```bash
-curl -SLO https://github.com/o0th/get-version/releases/download/0.2.0/get-version
+curl -SLO https://github.com/o0th/get-version/releases/download/0.2.1/get-version
 ```
 
 Execute the binary to get the version information from Cargo.toml:
