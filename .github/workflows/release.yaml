@@ -39,6 +39,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.VERSION }}
-          name: "get-version ${{ env.VERSION }}"
+          name: "get-version v${{ env.VERSION }}"
           bodyFile: ".github/changelogs/${{ env.VERSION }}.md"
           artifacts: "./target/release/get-version"
