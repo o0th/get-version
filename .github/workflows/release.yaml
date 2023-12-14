@@ -33,12 +33,12 @@ jobs:
             await github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: `refs/tags/${process.env.VERSION}`,
+              ref: `refs/tags/get-version-v${process.env.VERSION}`,
               sha: context.sha
             })
       - uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.VERSION }}
-          name: "get-version v${{ env.VERSION }}"
+          name: "get-version-v${{ env.VERSION }}"
           bodyFile: ".github/changelogs/${{ env.VERSION }}.md"
           artifacts: "./target/release/get-version"
